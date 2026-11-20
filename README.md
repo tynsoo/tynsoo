@@ -23,7 +23,7 @@
 
 I'm a fourth-year **BS Information Technology** student majoring in **Cybersecurity** at **Mapúa Malayan Colleges Laguna** (Class of 2027), with a soft spot for **UI/UX design, graphic design and front-end development**.
 
-I like work that looks good *and* holds up: interfaces with personality on the outside, careful authentication, access control and encryption underneath. Outside of code I'm the **Creatives Director of the Infotech Society**, where I design pubmats, presentations and merch, and I've been a **Dean's Lister for six terms**.
+I like work that looks good *and* holds up: interfaces with personality on the outside, careful authentication, access control and encryption underneath. Outside of code I'm the **Creatives Director of the Infotech Society A.Y. 2025-2026**, where I design pubmats, presentations and merch, and I've been a **Dean's Lister for six terms**.
 
 This is where I keep the things I build, from capstone systems to tiny pixel-art apps I draw myself.
 
