@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="192" viewBox="0 0 600 192" role="img" aria-labelledby="t">
+<title id="t">Most used languages</title>
+<style>.h{font:700 20px 'Segoe UI',Ubuntu,Arial,sans-serif;fill:#FBE7A1}.l{font:400 13px 'Segoe UI',Ubuntu,Arial,sans-serif;fill:#C9D1D9}.p{fill:#8B949E}</style>
+<rect width="600" height="192" rx="6" fill="#0D1117"/>
+<text x="24" y="38" class="h">Most Used Languages</text>
+<clipPath id="c"><rect x="24" y="62" width="552" height="12" rx="6"/></clipPath>
+<g clip-path="url(#c)"><rect x="24.00" y="62" width="266.57" height="12" fill="#FBE7A1"/><rect x="290.57" y="62" width="235.13" height="12" fill="#FFF3B8"/><rect x="525.70" y="62" width="24.36" height="12" fill="#E8C766"/><rect x="550.06" y="62" width="15.02" height="12" fill="#FFFBE6"/><rect x="565.08" y="62" width="10.92" height="12" fill="#C9A227"/></g>
+<rect x="24" y="91" width="10" height="10" fill="#FBE7A1"/><text x="42" y="100" class="l">PHP <tspan class="p">48.3%</tspan></text><rect x="300" y="91" width="10" height="10" fill="#FFF3B8"/><text x="318" y="100" class="l">HTML <tspan class="p">42.6%</tspan></text><rect x="24" y="119" width="10" height="10" fill="#E8C766"/><text x="42" y="128" class="l">JavaScript <tspan class="p">4.4%</tspan></text><rect x="300" y="119" width="10" height="10" fill="#FFFBE6"/><text x="318" y="128" class="l">Python <tspan class="p">2.7%</tspan></text><rect x="24" y="147" width="10" height="10" fill="#C9A227"/><text x="42" y="156" class="l">CSS <tspan class="p">2.0%</tspan></text>
+</svg>
