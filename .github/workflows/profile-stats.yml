@@ -1,0 +1,54 @@
+name: Update profile stats
+
+on:
+  schedule:
+    - cron: "0 17 * * *" # 1:00 AM Philippine time
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/profile-stats.yml
+      - scripts/generate-languages.mjs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate streak card
+        uses: DenverCoder1/github-readme-streak-stats@v1
+        with:
+          options: user=${{ github.repository_owner }}&hide_border=true&background=0D1117&stroke=30363D&ring=FBE7A1&fire=FFF3B8&currStreakNum=F0F6FC&sideNums=F0F6FC&currStreakLabel=FBE7A1&sideLabels=C9D1D9&dates=8B949E&timezone=Asia/Manila&disable_animations=true
+          path: profile/streak.svg
+
+      - name: Generate language card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+        run: node scripts/generate-languages.mjs
+
+      - name: Commit updated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/streak.svg profile/languages.svg
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git commit -m "Update profile stats"
+          git pull --rebase origin main
+          git push origin HEAD:main
